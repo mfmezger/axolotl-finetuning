@@ -1,7 +1,10 @@
 # Finetuning with Axolotl
 
-## Start the Script
+## Start the Docker
 
-      - GIT_COMMITTER_EMAIL=${GIT_COMMITTER_EMAIL}
+`docker compose up -d`
+`docker rcompose exec axolotl bash`
+
+## Start the Script
 
 `accelerate launch -m axolotl.cli.train /training/qlora-openllama3b.yaml`
