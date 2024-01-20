@@ -1,0 +1,23 @@
+# version: '3.8'
+services:
+  axolotl:
+    image: winglian/axolotl:main-py3.10-cu121-2.1.1
+    volumes:
+      - ./axolotl:/workspace/axolotl
+      - ~/.cache/huggingface/:/root/.cache/huggingface/
+      - ./training:/training
+      # Mount the output paths.
+      - ./model_output:/model_output
+      - ./lora_merge_output:/lora_merge_output
+    # set environment variables
+    environment:
+      # Set environment variables
+      - WANDB_API_KEY=${WANDB_API_KEY}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              # count: 1
+              capabilities: [gpu]
+    command: tail -f /dev/null
