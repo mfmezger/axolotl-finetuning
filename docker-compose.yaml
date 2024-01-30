@@ -5,7 +5,7 @@ services:
     volumes:
       - ./axolotl:/workspace/axolotl
       - ~/.cache/huggingface/:/root/.cache/huggingface/
-      - ./training:/training
+      - ./training:/workspace/training
       # Mount the output paths.
       - ./model_output:/model_output
       - ./lora_merge_output:/lora_merge_output
