@@ -2,8 +2,9 @@
 
 ## Start the Docker
 
-`docker compose up -d`. 
-`docker compose exec axolotl bash`
+`docker compose up -d`
+
+`docker compose exec axolotl bash`  
 
 ## Start the Script
 
