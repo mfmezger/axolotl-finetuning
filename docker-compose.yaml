@@ -1,9 +1,8 @@
 # version: '3.8'
 services:
   axolotl:
-    image: winglian/axolotl:main-py3.10-cu121-2.1.1
+    image: winglian/axolotl:main-py3.10-cu118-2.0.1
     volumes:
-      - ./axolotl:/workspace/axolotl
       - ~/.cache/huggingface/:/root/.cache/huggingface/
       - ./training:/workspace/training
       # Mount the output paths.
