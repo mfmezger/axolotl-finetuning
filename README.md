@@ -7,6 +7,9 @@
 `docker compose exec axolotl bash`  
 
 ## Start the Script
+Prepare the dataset:
+`CUDA_VISIBLE_DEVICES="" python -m axolotl.cli.preprocess training/qlora-qwen0B.yaml`
+
 
 `accelerate launch -m axolotl.cli.train training/qlora-openllama3b.yaml`
 
